@@ -1,0 +1,840 @@
+# ============================================================
+# 1. COMMENTS
+# ============================================================
+
+# A comment always starts with the hash (#) symbol.
+# Comments are ignored by the YAML parser.
+# This is a single-line comment.
+
+name: SmartQuiz  # This is an inline comment
+
+# ============================================================
+# 2. BASIC KEY-VALUE PAIRS
+# ============================================================
+
+# The simplest YAML structure is key: value pairs.
+# Note: there must be a space after the colon.
+
+name: SmartQuiz
+role: Developer
+language: JavaScript
+environment: development
+
+# ============================================================
+# 3. STRINGS
+# ============================================================
+
+# Simple strings usually do not need quotes.
+
+projectName: SmartQuiz
+description: Learning YAML
+city: Meerut
+
+# Strings can also use double quotes.
+quotedString: "This is a string"
+
+# Or single quotes.
+singleQuotedString: 'This is also a string'
+
+# ============================================================
+# 4. NUMBERS
+# ============================================================
+
+# Numbers can be integers or decimals.
+
+age: 20
+port: 5000
+timeout: 30
+price: 99.99
+
+# ============================================================
+# 5. BOOLEANS
+# ============================================================
+
+# Booleans can be either true or false.
+
+isActive: true
+isCompleted: false
+debug: true
+production: false
+
+# ============================================================
+# 6. NULL VALUES
+# ============================================================
+
+# null represents the absence of a value.
+databasePassword: null
+
+# An empty value (nothing after the colon) is also treated as null.
+optionalValue:
+
+# ============================================================
+# 7. BASIC OBJECT / MAPPING
+# ============================================================
+
+# An object (mapping) groups related key-value pairs.
+# Child keys must be indented under their parent.
+
+server:
+  host: localhost
+  port: 5000
+  enabled: true
+
+# ============================================================
+# 8. NESTED OBJECTS
+# ============================================================
+
+# Objects can be nested inside other objects.
+# Always use consistent indentation (2 spaces is common).
+
+application:
+  name: SmartQuiz
+  environment: development
+
+server:
+  host: localhost
+  port: 5000
+
+database:
+  type: mongodb
+  host: localhost
+  port: 27017
+
+# ============================================================
+# 9. LISTS
+# ============================================================
+
+# A list is created using a dash (-) followed by a space.
+# All items should be at the same indentation level.
+
+languages:
+  - JavaScript
+  - Python
+  - Java
+  - C++
+
+# Another list example.
+subjects:
+  - Mathematics
+  - Physics
+  - Chemistry
+  - Computer Science
+
+# ============================================================
+# 10. LIST OF OBJECTS
+# ============================================================
+
+# Each list item can itself be an object (mapping).
+# Indent the keys of each object under its dash.
+
+users:
+  - name: Alice
+    role: Admin
+    active: true
+
+  - name: Bob
+    role: Developer
+    active: true
+
+  - name: Charlie
+    role: Student
+    active: false
+
+# ============================================================
+# 11. NESTED LISTS
+# ============================================================
+
+# Lists can be nested inside objects inside other lists.
+# Keep track of the indentation at every level.
+
+classes:
+  - name: Class 9
+    subjects:
+      - Mathematics
+      - Science
+      - English
+
+  - name: Class 10
+    subjects:
+      - Mathematics
+      - Science
+      - Social Science
+
+# ============================================================
+# 12. LISTS INSIDE OBJECTS
+# ============================================================
+
+# An object can contain a list as one of its values.
+
+student:
+  name: Rahul
+  age: 16
+
+  skills:
+    - JavaScript
+    - HTML
+    - CSS
+
+  hobbies:
+    - Reading
+    - Coding
+    - Cricket
+
+# ============================================================
+# 13. OBJECTS INSIDE LISTS
+# ============================================================
+
+# A list can contain objects, useful for tabular-style data.
+
+products:
+  - id: 101
+    name: Laptop
+    price: 55000
+    available: true
+
+  - id: 102
+    name: Keyboard
+    price: 1500
+    available: true
+
+  - id: 103
+    name: Mouse
+    price: 800
+    available: false
+
+# ============================================================
+# 14. COMMENTS WITH CONFIGURATION
+# ============================================================
+
+# Comments help explain what each block does in a config file.
+
+# Application configuration
+config:
+  name: SmartQuiz
+
+# Development server
+server:
+  host: localhost
+  port: 5000
+
+# Enable debugging during development
+debug: true
+
+# ============================================================
+# 15. SPECIAL CHARACTERS AND QUOTES
+# ============================================================
+
+# Quoting makes strings with special characters clearer and safer.
+
+message: "Hello: Welcome to YAML"
+url: "https://example.com"
+description: "YAML uses indentation to represent structure."
+
+# ============================================================
+# 16. VERSION VALUES AS STRINGS
+# ============================================================
+
+# When a value should be treated as text (not a number),
+# quoting it makes the intention explicit.
+
+version: "1.0"
+nodeVersion: "22"
+apiVersion: "v1"
+
+# ============================================================
+# 17. MULTI-LINE STRING USING |
+# ============================================================
+
+# The pipe (|) style preserves every line break as it is.
+
+longDescription: |
+  YAML is a human-readable data serialization language.
+  It is commonly used for configuration files.
+  Indentation is important in YAML.
+
+# ============================================================
+# 18. MULTI-LINE STRING USING >
+# ============================================================
+
+# The greater-than (>) style folds line breaks into spaces.
+# Useful for writing long paragraphs in a readable way.
+
+summary: >
+  YAML is commonly used for configuration,
+  automation, CI/CD pipelines,
+  and infrastructure tools.
+
+# ============================================================
+# 19. INLINE / FLOW LIST
+# ============================================================
+
+# A list can also be written in a single line using [ ].
+
+frontendLanguages: [HTML, CSS, JavaScript]
+
+# The same list written in the normal multi-line style:
+
+backendLanguages:
+  - JavaScript
+  - Node.js
+  - Python
+
+# ============================================================
+# 20. INLINE / FLOW OBJECT
+# ============================================================
+
+# An object can also be written in a single line using { }.
+
+serverInfo: {host: localhost, port: 5000}
+
+# Equivalent expanded version:
+
+serverDetails:
+  host: localhost
+  port: 5000
+
+# ============================================================
+# 21. REAL-WORLD APPLICATION CONFIGURATION
+# ============================================================
+
+# A realistic configuration for an application like SmartQuiz.
+
+smartQuiz:
+  application:
+    name: SmartQuiz
+    version: "1.0"
+    environment: development
+    enabled: true
+
+  server:
+    host: localhost
+    port: 5000
+
+  database:
+    type: mongodb
+    host: localhost
+    port: 27017
+    name: smartquiz
+
+  features:
+    authentication: true
+    analytics: true
+    quizGeneration: true
+    pdfTeacher: true
+
+  supportedLanguages:
+    - English
+    - Hindi
+
+# ============================================================
+# 22. DATABASE CONFIGURATION
+# ============================================================
+
+databaseConfig:
+  type: mongodb
+
+  connection:
+    host: localhost
+    port: 27017
+    database: smartquiz
+
+  options:
+    retryWrites: true
+    autoIndex: true
+
+# ============================================================
+# 23. SERVER CONFIGURATION
+# ============================================================
+
+serverConfig:
+  host: localhost
+  port: 5000
+  protocol: http
+
+  cors:
+    enabled: true
+    allowedOrigins:
+      - http://localhost:5500
+      - http://localhost:3000
+
+# ============================================================
+# 24. API CONFIGURATION
+# ============================================================
+
+api:
+  baseUrl: "http://localhost:5000/api"
+
+  endpoints:
+    auth: "/auth"
+    users: "/users"
+    quizzes: "/quizzes"
+    dashboard: "/dashboard"
+
+  timeout: 30000
+
+# ============================================================
+# 25. FEATURES CONFIGURATION
+# ============================================================
+
+features:
+  authentication:
+    enabled: true
+
+  analytics:
+    enabled: true
+
+  notifications:
+    enabled: false
+
+  ai:
+    enabled: true
+    provider: Gemini
+    model: "gemini-model"
+
+# ============================================================
+# 26. USERS / ADMINS
+# ============================================================
+
+# A list of admin users, each having their own permissions list.
+
+admins:
+  - name: Alice
+    email: alice@example.com
+    permissions:
+      - read
+      - write
+      - delete
+
+  - name: Bob
+    email: bob@example.com
+    permissions:
+      - read
+      - write
+
+# ============================================================
+# 27. GITHUB ACTIONS EXAMPLE
+# ============================================================
+
+# This is a learning example of a GitHub Actions workflow.
+#
+# NOTE:
+# A real GitHub Actions workflow normally belongs inside:
+#   .github/workflows/
+#
+# Example filename:
+#   .github/workflows/node-ci.yml
+
+githubActionsExample:
+  name: Node.js CI
+
+  on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+
+        - name: Install dependencies
+          run: npm install
+
+        - name: Run tests
+          run: npm test
+
+# ============================================================
+# 28. DOCKER COMPOSE EXAMPLE
+# ============================================================
+
+# This is a learning representation of a Docker Compose file.
+#
+# A real Docker Compose file normally starts with:
+#   services:
+#     ...
+#
+# Example filename:
+#   docker-compose.yml
+
+dockerComposeExample:
+  services:
+    backend:
+      build: .
+      ports:
+        - "5000:5000"
+      environment:
+        NODE_ENV: development
+
+    database:
+      image: mongo
+      ports:
+        - "27017:27017"
+
+# ============================================================
+# 29. KUBERNETES DEPLOYMENT EXAMPLE
+# ============================================================
+
+# This is a learning example of a Kubernetes Deployment manifest.
+#
+# A real Kubernetes file is normally named like:
+#   deployment.yaml
+
+kubernetesDeploymentExample:
+  apiVersion: apps/v1
+  kind: Deployment
+
+  metadata:
+    name: backend
+
+  spec:
+    replicas: 2
+
+    selector:
+      matchLabels:
+        app: backend
+
+    template:
+      metadata:
+        labels:
+          app: backend
+
+      spec:
+        containers:
+          - name: backend
+            image: my-backend:latest
+            ports:
+              - containerPort: 5000
+
+# ============================================================
+# 30. ANCHORS
+# ============================================================
+
+# Anchors let you define a reusable block of YAML.
+# The & symbol gives the block a name (anchor).
+
+defaults: &default_settings
+  timeout: 30
+  retries: 3
+  enabled: true
+
+# ============================================================
+# 31. ALIASES
+# ============================================================
+
+# An alias (using *) references an existing anchor.
+# The << symbol merges the anchor's values into the current object.
+
+development:
+  <<: *default_settings
+  environment: development
+
+production:
+  <<: *default_settings
+  environment: production
+
+# ============================================================
+# 32. MORE COMPLEX NESTED STRUCTURE
+# ============================================================
+
+# Real projects often have deeply nested configurations.
+# Always keep indentation consistent to avoid errors.
+
+project:
+  name: SmartQuiz
+
+  team:
+    frontend:
+      technologies:
+        - HTML
+        - CSS
+        - JavaScript
+
+    backend:
+      technologies:
+        - Node.js
+        - Express
+        - MongoDB
+
+  deployment:
+    environments:
+      development:
+        enabled: true
+        url: "http://localhost:5000"
+
+      production:
+        enabled: false
+        url: "https://example.com"
+
+# ============================================================
+# 33. COMMON YAML MISTAKES
+# ============================================================
+
+# WRONG (inconsistent indentation):
+#
+# server:
+# host: localhost
+# port: 5000
+#
+# The "host" and "port" keys must be indented under "server".
+
+# CORRECT:
+
+correctServer:
+  host: localhost
+  port: 5000
+
+# ============================================================
+# 34. LIST INDENTATION
+# ============================================================
+
+# List items should be aligned with each other under the parent key.
+
+# Correct:
+correctLanguages:
+  - JavaScript
+  - Python
+  - Java
+
+# ============================================================
+# 35. BOOLEAN VS STRING
+# ============================================================
+
+# A boolean value (no quotes) is different from a string (with quotes).
+# They look similar but represent different data types.
+
+# Boolean:
+booleanValue: true
+
+# String:
+stringValue: "true"
+
+# ============================================================
+# 36. NUMBER VS STRING
+# ============================================================
+
+# Numbers without quotes are treated as numeric values.
+# Numbers with quotes are treated as text strings.
+
+# Number:
+numericPort: 5000
+
+# String:
+stringPort: "5000"
+
+# ============================================================
+# 37. NULL
+# ============================================================
+
+# Both of the following represent a null (empty) value.
+
+valueWithNull: null
+
+emptyValue:
+
+# ============================================================
+# 38. ENVIRONMENT CONFIGURATION
+# ============================================================
+
+# A typical development environment configuration.
+
+environment:
+  name: development
+
+  server:
+    host: localhost
+    port: 5000
+
+  logging:
+    enabled: true
+    level: debug
+
+  database:
+    host: localhost
+    port: 27017
+
+# ============================================================
+# 39. DIFFERENT ENVIRONMENTS
+# ============================================================
+
+# Configuration for multiple environments in one file.
+
+environments:
+  development:
+    debug: true
+    logging: verbose
+
+  testing:
+    debug: true
+    logging: normal
+
+  production:
+    debug: false
+    logging: error
+
+# ============================================================
+# 40. CI/CD PIPELINE CONCEPT
+# ============================================================
+
+# A simple representation of CI/CD pipeline stages.
+
+pipeline:
+  name: Application Pipeline
+
+  stages:
+    - install
+    - test
+    - build
+    - deploy
+
+  configuration:
+    runTests: true
+    buildApplication: true
+    deployApplication: false
+
+# ============================================================
+# 41. STUDENT DATA EXAMPLE
+# ============================================================
+
+# Example: list of students, each with their own subjects list.
+
+students:
+  - id: 1
+    name: Rahul
+    class: 10
+    board: CBSE
+    subjects:
+      - Mathematics
+      - Science
+      - English
+    active: true
+
+  - id: 2
+    name: Priya
+    class: 12
+    board: CBSE
+    subjects:
+      - Physics
+      - Chemistry
+      - Mathematics
+    active: true
+
+# ============================================================
+# 42. QUIZ CONFIGURATION EXAMPLE
+# ============================================================
+
+quiz:
+  title: JavaScript Basics
+  subject: Computer Science
+  difficulty: medium
+  questionCount: 10
+  timeLimit: 30
+
+  questionTypes:
+    - MCQ
+    - TrueFalse
+
+  settings:
+    shuffleQuestions: true
+    showResult: true
+    allowRetry: false
+
+# ============================================================
+# 43. API REQUEST CONFIGURATION EXAMPLE
+# ============================================================
+
+# A sample structure describing an API request.
+
+request:
+  method: POST
+  endpoint: "/api/quizzes"
+
+  headers:
+    Content-Type: application/json
+
+  body:
+    subject: JavaScript
+    difficulty: medium
+    count: 10
+
+# ============================================================
+# 44. FILE CONFIGURATION
+# ============================================================
+
+# Settings related to file uploads.
+
+files:
+  allowedExtensions:
+    - .pdf
+    - .jpg
+    - .jpeg
+    - .png
+
+  upload:
+    maxSizeMB: 10
+    multiple: false
+
+# ============================================================
+# 45. SECURITY-RELATED CONFIGURATION EXAMPLE
+# ============================================================
+
+security:
+  authentication:
+    enabled: true
+
+  authorization:
+    enabled: true
+
+  rateLimit:
+    enabled: true
+    requestsPerMinute: 100
+
+# ============================================================
+# 46. YAML STRUCTURE SUMMARY
+# ============================================================
+
+# A quick summary of YAML data types covered above.
+
+summary:
+  keyValue:
+    example: "key: value"
+
+  nestedObject:
+    example:
+      child: value
+
+  list:
+    example:
+      - item1
+      - item2
+
+  boolean:
+    example: true
+
+  null:
+    example: null
+
+# ============================================================
+# END OF YAML EXAMPLES
+# ============================================================
+
+# Important:
+#
+# This file is intentionally a learning/reference file.
+# Some examples above are standalone structures rather than
+# complete configuration files for a particular tool.
+#
+# GitHub Actions, Docker Compose, Kubernetes, and other tools
+# have their own configuration rules in addition to YAML syntax.
+#
+# Always check the official documentation of the tool you are
+# configuring.
