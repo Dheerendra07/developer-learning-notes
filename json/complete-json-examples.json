@@ -1,0 +1,360 @@
+
+{
+  "01_basic_object": {
+    "_description": "A JSON object stores data using key-value pairs enclosed in curly braces {}.",
+    "name": "SmartQuiz",
+    "role": "Developer",
+    "language": "JavaScript"
+  },
+  "02_multiple_properties": {
+    "_description": "An object can hold multiple properties separated by commas.",
+    "projectName": "SmartQuiz",
+    "version": "1.0",
+    "isLive": true
+  },
+  "03_strings": {
+    "_description": "Text data must be enclosed in double quotes.",
+    "city": "Meerut",
+    "country": "India",
+    "email": "user@example.com"
+  },
+  "04_numbers": {
+    "_description": "JSON supports integers and decimal numbers. Quotes are not used for numbers.",
+    "age": 20,
+    "port": 5000,
+    "price": 99.99,
+    "negativeNumber": -15
+  },
+  "05_booleans": {
+    "_description": "Booleans represent true or false. They must be lowercase and without quotes.",
+    "isActive": true,
+    "isCompleted": false,
+    "debug": true
+  },
+  "06_null": {
+    "_description": "null represents the intentional absence of a value. It must be lowercase and without quotes.",
+    "spouseName": null,
+    "errorMessage": null
+  },
+  "07_arrays": {
+    "_description": "An array is an ordered list of items enclosed in square brackets [].",
+    "primeNumbers": [2, 3, 5, 7, 11],
+    "mixedTypes": ["Text", 42, true, null]
+  },
+  "08_array_of_strings": {
+    "_description": "A list containing only text strings.",
+    "subjects": ["Mathematics", "Physics", "Computer Science"]
+  },
+  "09_array_of_numbers": {
+    "_description": "A list containing only numbers.",
+    "marks": [85, 92, 78, 90]
+  },
+  "10_array_of_objects": {
+    "_description": "A list where each item is an object. Very common in API responses.",
+    "users": [
+      {
+        "id": 1,
+        "name": "Alice",
+        "role": "Admin"
+      },
+      {
+        "id": 2,
+        "name": "Bob",
+        "role": "Developer"
+      }
+    ]
+  },
+  "11_nested_objects": {
+    "_description": "An object placed inside another object. This creates a hierarchy.",
+    "user": {
+      "name": "Priya",
+      "age": 20,
+      "address": {
+        "city": "Delhi",
+        "zipCode": "110001"
+      }
+    }
+  },
+  "12_objects_inside_arrays": {
+    "_description": "Similar to array of objects, but emphasizing the nesting level.",
+    "classes": [
+      {
+        "className": "10-A",
+        "teacher": "Mr. Sharma"
+      },
+      {
+        "className": "10-B",
+        "teacher": "Mrs. Gupta"
+      }
+    ]
+  },
+  "13_arrays_inside_objects": {
+    "_description": "A property whose value is an array.",
+    "student": {
+      "name": "Rahul",
+      "subjects": ["Math", "Science", "English"]
+    }
+  },
+  "14_empty_object": {
+    "_description": "An object with no properties. Useful as a default placeholder.",
+    "metadata": {},
+    "config": {}
+  },
+  "15_empty_array": {
+    "_description": "An array with no items. Useful for initializing a list before adding data.",
+    "errors": [],
+    "notifications": []
+  },
+  "16_double_quotes_and_keys": {
+    "_description": "In JSON, keys MUST be strings enclosed in double quotes. Single quotes are invalid.",
+    "validKey": "validValue",
+    "anotherValidKey": 42
+  },
+  "17_invalid_json_examples": {
+    "_description": "Standard JSON does not allow single quotes, unquoted keys, trailing commas, or comments. Here are invalid examples represented as strings to keep this file valid.",
+    "invalidSingleQuotes": "{ 'name': 'SmartQuiz' }",
+    "invalidUnquotedKeys": "{ name: 'SmartQuiz' }",
+    "invalidTrailingComma": "{ \"name\": \"SmartQuiz\", }",
+    "invalidComment": "{ \"name\": \"SmartQuiz\" /* this is a comment */ }",
+    "invalidBoolean": "{ \"isActive\": True }",
+    "invalidNull": "{ \"data\": Null }"
+  },
+  "18_corrected_json_examples": {
+    "_description": "The corrected versions of the invalid examples above.",
+    "validSingleQuotes": {
+      "name": "SmartQuiz"
+    },
+    "validUnquotedKeys": {
+      "name": "SmartQuiz"
+    },
+    "validTrailingComma": {
+      "name": "SmartQuiz"
+    },
+    "validBoolean": {
+      "isActive": true
+    },
+    "validNull": {
+      "data": null
+    }
+  },
+  "19_escape_sequences": {
+    "_description": "Special characters inside strings must be escaped using a backslash \\.",
+    "escapedQuote": "He said, \"Hello!\"",
+    "backslashPath": "C:\\Users\\Rahul\\Desktop",
+    "newlineCharacter": "Line 1.\nLine 2.",
+    "tabCharacter": "Column 1\tColumn 2"
+  },
+  "20_unicode_characters": {
+    "_description": "You can include special unicode characters (like emojis) using \\u followed by the hex code.",
+    "emoji": "\uD83D\uDE00",
+    "currencySymbol": "\u20B9"
+  },
+  "21_long_strings": {
+    "_description": "Long text must be kept on a single physical line. Use \\n for line breaks instead of pressing Enter.",
+    "description": "This is a very long string that represents a paragraph. Even if it gets very long, it must stay on one line in the JSON file. To break lines, use \\n like this: Line 1.\\nLine 2."
+  },
+  "22_nested_json": {
+    "_description": "Combining objects, arrays, and nested objects to represent complex real-world data.",
+    "school": {
+      "name": "Delhi Public School",
+      "classes": [
+        {
+          "className": "10-A",
+          "students": [
+            {
+              "name": "Rahul",
+              "marks": [90, 85, 92]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "23_real_world_user_data": {
+    "_description": "A typical user object returned from a database or API.",
+    "user": {
+      "id": 101,
+      "name": "Rahul Singh",
+      "email": "rahul@example.com",
+      "isActive": true,
+      "lastLogin": null
+    }
+  },
+  "24_real_world_product_data": {
+    "_description": "A typical product object for an e-commerce application.",
+    "product": {
+      "id": 501,
+      "name": "Gaming Laptop",
+      "price": 55000.00,
+      "available": true,
+      "tags": ["electronics", "computers", "gaming"]
+    }
+  },
+  "25_real_world_student_data": {
+    "_description": "A student object containing nested arrays and objects.",
+    "student": {
+      "id": "S2023",
+      "name": "Priya",
+      "class": 12,
+      "subjects": [
+        {
+          "name": "Physics",
+          "marks": 95
+        },
+        {
+          "name": "Chemistry",
+          "marks": 88
+        }
+      ]
+    }
+  },
+  "26_real_world_quiz_data": {
+    "_description": "A quiz object with questions and options, typical for an app like SmartQuiz.",
+    "quiz": {
+      "title": "JavaScript Basics",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is JavaScript?",
+          "options": [
+            "Programming language",
+            "Database",
+            "Operating system",
+            "Browser"
+          ],
+          "correctAnswer": "Programming language"
+        }
+      ]
+    }
+  },
+  "27_api_request_body": {
+    "_description": "Data sent from frontend to backend (e.g., a POST request to create a user).",
+    "username": "rahul123",
+    "email": "rahul@example.com",
+    "password": "securePassword123!"
+  },
+  "28_api_success_response": {
+    "_description": "Standard structure for a successful API response.",
+    "success": true,
+    "message": "Quiz fetched successfully",
+    "data": {
+      "id": 101,
+      "title": "JavaScript Basics"
+    }
+  },
+  "29_api_error_response": {
+    "_description": "Standard structure for an API error response.",
+    "success": false,
+    "error": {
+      "code": "UNAUTHORIZED",
+      "message": "Invalid API key provided."
+    }
+  },
+  "30_rest_api_response_structure": {
+    "_description": "A complex API response including pagination metadata and an array of data items.",
+    "statusCode": 200,
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 5,
+      "totalItems": 50
+    },
+    "data": [
+      {
+        "id": 1,
+        "name": "Alice"
+      },
+      {
+        "id": 2,
+        "name": "Bob"
+      }
+    ]
+  },
+  "31_json_parse_example": {
+    "_description": "JSON cannot contain JavaScript code. This shows how JSON.parse() is used, represented as a string.",
+    "concept": "JSON.parse() converts a JSON string into a JavaScript object.",
+    "javascriptCode": "const data = JSON.parse(jsonString);"
+  },
+  "32_json_stringify_example": {
+    "_description": "This shows how JSON.stringify() is used, represented as a string.",
+    "concept": "JSON.stringify() converts a JavaScript object into a JSON string.",
+    "javascriptCode": "const jsonString = JSON.stringify(data);"
+  },
+  "33_json_vs_javascript_object": {
+    "_description": "JSON is a string format. JavaScript objects are memory structures. JSON requires double quotes for all keys and string values.",
+    "jsonString": "{\"name\": \"SmartQuiz\", \"version\": \"1.0\"}",
+    "javascriptObjectCode": "const app = { name: 'SmartQuiz', version: '1.0' };"
+  },
+  "34_json_vs_yaml": {
+    "_description": "YAML relies on indentation and dashes. JSON relies on curly braces and square brackets. YAML supports comments, JSON does not.",
+    "yamlEquivalent": "server:\n  host: localhost\n  port: 5000",
+    "jsonEquivalent": {
+      "server": {
+        "host": "localhost",
+        "port": 5000
+      }
+    }
+  },
+  "35_json_limitations": {
+    "_description": "JSON cannot represent Dates, undefined, Functions, NaN, or Infinity directly. They must be converted to strings or null.",
+    "dateExample": "2023-10-25T14:30:00Z",
+    "undefinedHandling": "If a JS property is undefined, JSON.stringify() removes the key entirely.",
+    "nanHandling": "If a JS property is NaN, JSON.stringify() converts it to null."
+  },
+  "36_complex_real_world_example": {
+    "_description": "A complete configuration example combining all concepts: objects, arrays, nested data, and various data types.",
+    "apiVersion": "v1",
+    "application": "SmartQuiz",
+    "environment": "development",
+    "server": {
+      "host": "localhost",
+      "port": 5000,
+      "cors": {
+        "enabled": true,
+        "allowedOrigins": [
+          "http://localhost:5500",
+          "http://localhost:3000"
+        ]
+      }
+    },
+    "database": {
+      "type": "mongodb",
+      "uri": "mongodb://localhost:27017",
+      "options": {
+        "retryWrites": true,
+        "autoIndex": false
+      }
+    },
+    "features": {
+      "authentication": true,
+      "analytics": false,
+      "ai": {
+        "enabled": true,
+        "provider": "Gemini"
+      }
+    },
+    "admins": [
+      {
+        "name": "Alice",
+        "permissions": ["read", "write", "delete"]
+      }
+    ]
+  },
+  "37_json_structure_summary": {
+    "_description": "A quick reference summary of JSON data types.",
+    "dataTypes": {
+      "string": "Double quotes",
+      "number": "No quotes",
+      "boolean": "true or false",
+      "null": "null",
+      "object": "{ }",
+      "array": "[ ]"
+    },
+    "syntaxRules": [
+      "Keys must be strings in double quotes",
+      "Use commas to separate items",
+      "No trailing commas",
+      "No comments allowed"
+    ]
+  }
+}
